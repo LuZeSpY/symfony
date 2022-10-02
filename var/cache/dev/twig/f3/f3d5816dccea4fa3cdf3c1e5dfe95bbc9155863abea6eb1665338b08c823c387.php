@@ -27,6 +27,7 @@ class __TwigTemplate_3c8f02bd32b3018d51bc334813fa627872c574f3a8b647bd9f10bbafbac
         $this->parent = false;
 
         $this->blocks = [
+            'stylesheets' => [$this, 'block_stylesheets'],
         ];
     }
 
@@ -45,19 +46,38 @@ class __TwigTemplate_3c8f02bd32b3018d51bc334813fa627872c574f3a8b647bd9f10bbafbac
         // line 5
         echo twig_escape_filter($this->env, (isset($context["title"]) || array_key_exists("title", $context) ? $context["title"] : (function () { throw new RuntimeError('Variable "title" does not exist.', 5, $this->source); })()), "html", null, true);
         echo "</title>
+        ";
+        // line 6
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 7
+        echo "        <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/app.css"), "html", null, true);
+        echo "\">
     </head>
     <body>
         <h1>";
-        // line 8
-        echo twig_escape_filter($this->env, (isset($context["title"]) || array_key_exists("title", $context) ? $context["title"] : (function () { throw new RuntimeError('Variable "title" does not exist.', 8, $this->source); })()), "html", null, true);
+        // line 10
+        echo twig_escape_filter($this->env, (isset($context["title"]) || array_key_exists("title", $context) ? $context["title"] : (function () { throw new RuntimeError('Variable "title" does not exist.', 10, $this->source); })()), "html", null, true);
         echo "</h1>
 \t  ";
-        // line 10
+        // line 12
         echo "        <p>";
-        echo twig_escape_filter($this->env, (isset($context["content"]) || array_key_exists("content", $context) ? $context["content"] : (function () { throw new RuntimeError('Variable "content" does not exist.', 10, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["content"]) || array_key_exists("content", $context) ? $context["content"] : (function () { throw new RuntimeError('Variable "content" does not exist.', 12, $this->source); })()), "html", null, true);
         echo "</p>
     </body>
 </html>";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 6
+    public function block_stylesheets($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -75,7 +95,7 @@ class __TwigTemplate_3c8f02bd32b3018d51bc334813fa627872c574f3a8b647bd9f10bbafbac
 
     public function getDebugInfo()
     {
-        return array (  56 => 10,  52 => 8,  46 => 5,  40 => 1,);
+        return array (  75 => 6,  64 => 12,  60 => 10,  53 => 7,  51 => 6,  47 => 5,  41 => 1,);
     }
 
     public function getSourceContext()
@@ -85,6 +105,8 @@ class __TwigTemplate_3c8f02bd32b3018d51bc334813fa627872c574f3a8b647bd9f10bbafbac
 <html>
     <head>
         <title>{{ title }}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel=\"stylesheet\" href=\"{{ asset('styles/app.css') }}\">
     </head>
     <body>
         <h1>{{ title }}</h1>
