@@ -101,6 +101,9 @@
             "./templates/base.html.twig"
         ]
     },
+    "symfony/ux-chartjs": {
+        "version": "v2.4.0"
+    },
     "symfony/webpack-encore-bundle": {
         "version": "1.15",
         "recipe": {

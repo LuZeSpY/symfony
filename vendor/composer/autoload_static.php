@@ -27,6 +27,7 @@ class ComposerStaticInit45bf9078b360f333f57e4f928c480abf
         'S' => 
         array (
             'Symfony\\WebpackEncoreBundle\\' => 28,
+            'Symfony\\UX\\Chartjs\\' => 19,
             'Symfony\\Runtime\\Symfony\\Component\\' => 34,
             'Symfony\\Polyfill\\Php81\\' => 23,
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -96,6 +97,10 @@ class ComposerStaticInit45bf9078b360f333f57e4f928c480abf
         'Symfony\\WebpackEncoreBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src',
+        ),
+        'Symfony\\UX\\Chartjs\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/ux-chartjs',
         ),
         'Symfony\\Runtime\\Symfony\\Component\\' => 
         array (
@@ -1891,6 +1896,12 @@ class ComposerStaticInit45bf9078b360f333f57e4f928c480abf
         'Symfony\\Runtime\\Symfony\\Component\\HttpFoundation\\RequestRuntime' => __DIR__ . '/..' . '/symfony/runtime/Internal/HttpFoundation/RequestRuntime.php',
         'Symfony\\Runtime\\Symfony\\Component\\HttpFoundation\\ResponseRuntime' => __DIR__ . '/..' . '/symfony/runtime/Internal/HttpFoundation/ResponseRuntime.php',
         'Symfony\\Runtime\\Symfony\\Component\\HttpKernel\\HttpKernelInterfaceRuntime' => __DIR__ . '/..' . '/symfony/runtime/Internal/HttpKernel/HttpKernelInterfaceRuntime.php',
+        'Symfony\\UX\\Chartjs\\Builder\\ChartBuilder' => __DIR__ . '/..' . '/symfony/ux-chartjs/Builder/ChartBuilder.php',
+        'Symfony\\UX\\Chartjs\\Builder\\ChartBuilderInterface' => __DIR__ . '/..' . '/symfony/ux-chartjs/Builder/ChartBuilderInterface.php',
+        'Symfony\\UX\\Chartjs\\ChartjsBundle' => __DIR__ . '/..' . '/symfony/ux-chartjs/ChartjsBundle.php',
+        'Symfony\\UX\\Chartjs\\DependencyInjection\\ChartjsExtension' => __DIR__ . '/..' . '/symfony/ux-chartjs/DependencyInjection/ChartjsExtension.php',
+        'Symfony\\UX\\Chartjs\\Model\\Chart' => __DIR__ . '/..' . '/symfony/ux-chartjs/Model/Chart.php',
+        'Symfony\\UX\\Chartjs\\Twig\\ChartExtension' => __DIR__ . '/..' . '/symfony/ux-chartjs/Twig/ChartExtension.php',
         'Symfony\\WebpackEncoreBundle\\Asset\\EntrypointLookup' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Asset/EntrypointLookup.php',
         'Symfony\\WebpackEncoreBundle\\Asset\\EntrypointLookupCollection' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Asset/EntrypointLookupCollection.php',
         'Symfony\\WebpackEncoreBundle\\Asset\\EntrypointLookupCollectionInterface' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Asset/EntrypointLookupCollectionInterface.php',
