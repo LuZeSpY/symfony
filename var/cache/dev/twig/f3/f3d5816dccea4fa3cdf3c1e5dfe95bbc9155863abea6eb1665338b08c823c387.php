@@ -50,9 +50,7 @@ class __TwigTemplate_3c8f02bd32b3018d51bc334813fa627872c574f3a8b647bd9f10bbafbac
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 7
-        echo "        <link rel=\"stylesheet\" href=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/app.css"), "html", null, true);
-        echo "\">
+        echo "        <link rel=\"stylesheet\" href=\"/build/app.css\">
     </head>
     <body>
         <h1>";
@@ -95,7 +93,7 @@ class __TwigTemplate_3c8f02bd32b3018d51bc334813fa627872c574f3a8b647bd9f10bbafbac
 
     public function getDebugInfo()
     {
-        return array (  75 => 6,  64 => 12,  60 => 10,  53 => 7,  51 => 6,  47 => 5,  41 => 1,);
+        return array (  73 => 6,  62 => 12,  58 => 10,  53 => 7,  51 => 6,  47 => 5,  41 => 1,);
     }
 
     public function getSourceContext()
@@ -106,7 +104,7 @@ class __TwigTemplate_3c8f02bd32b3018d51bc334813fa627872c574f3a8b647bd9f10bbafbac
     <head>
         <title>{{ title }}</title>
         {% block stylesheets %}{% endblock %}
-        <link rel=\"stylesheet\" href=\"{{ asset('styles/app.css') }}\">
+        <link rel=\"stylesheet\" href=\"/build/app.css\">
     </head>
     <body>
         <h1>{{ title }}</h1>

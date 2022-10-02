@@ -188,3 +188,14 @@ $classes[] = 'Symfony\WebpackEncoreBundle\EventListener\ExceptionListener';
 $classes[] = 'Symfony\WebpackEncoreBundle\Asset\TagRenderer';
 
 $preloaded = Preloader::preload($classes);
+require_once __DIR__.'/twig/5d/5d8d71f869447b746ed0970b8c7f755cf91e25c0202fed39e8ba6e23363a4250.php';
+require_once __DIR__.'/twig/f3/f3d5816dccea4fa3cdf3c1e5dfe95bbc9155863abea6eb1665338b08c823c387.php';
+require_once __DIR__.'/twig/31/316450b773986ba60d2096217fb68192624f4e1b07181622fdbdaa44ebee8619.php';
+require_once __DIR__.'/twig/a4/a42997770d530a0eeb31102c65a5cfaecf5ffc0984dda67ec972d5aaad14a21b.php';
+require_once __DIR__.'/twig/1d/1d460afe56db7692b8dfa693e71523dc3fa935d711b3843d3d2514dfb3aca2d2.php';
+require_once __DIR__.'/twig/6f/6f66de75021a58dd8cbabb884261aa66e090b6f1069fd24a547a66ead0ab40b4.php';
+
+$classes = [];
+$classes[] = 'Symfony\\Component\\Routing\\Generator\\CompiledUrlGenerator';
+$classes[] = 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableCompiledUrlMatcher';
+$preloaded = Preloader::preload($classes, $preloaded);
