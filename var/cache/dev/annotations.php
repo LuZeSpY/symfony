@@ -78,10 +78,24 @@ return [[
 '[C]App%5CController%5CAuteurController' => 1,
 'App%5CController%5CAuteurController%23index' => 0,
 '[C]App%5CController%5CAuteurController%23index' => 1,
+'App%5CController%5CBlogController' => 0,
+'[C]App%5CController%5CBlogController' => 1,
+'App%5CController%5CBlogController%23index' => 2,
+'[C]App%5CController%5CBlogController%23index' => 1,
+'App%5CController%5CBlogController%23posts' => 3,
+'[C]App%5CController%5CBlogController%23posts' => 1,
 'App%5CController%5CContactController' => 0,
 '[C]App%5CController%5CContactController' => 1,
 'App%5CController%5CContactController%23index' => 0,
 '[C]App%5CController%5CContactController%23index' => 1,
+'App%5CController%5CFrontendController' => 0,
+'[C]App%5CController%5CFrontendController' => 1,
+'App%5CController%5CFrontendController%23index' => 4,
+'[C]App%5CController%5CFrontendController%23index' => 1,
+'App%5CController%5CFrontendController%23carte' => 5,
+'[C]App%5CController%5CFrontendController%23carte' => 1,
+'App%5CController%5CFrontendController%23reservation' => 6,
+'[C]App%5CController%5CFrontendController%23reservation' => 1,
 'App%5CController%5CPostController' => 0,
 '[C]App%5CController%5CPostController' => 1,
 'App%5CController%5CPostController%23item' => 0,
@@ -116,6 +130,116 @@ return [[
 ], [
 
 0 => [],
-1 => 1664628944,
+1 => 1664713660,
+2 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/',
+                ],
+                'name' => [
+                    'page_blog',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+3 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/posts',
+                ],
+                'name' => [
+                    'blog_articles',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+4 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/',
+                ],
+                'name' => [
+                    'frontend_index',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+5 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/carte',
+                ],
+                'name' => [
+                    'frontend_carte',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+6 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/reservation',
+                ],
+                'name' => [
+                    'frontend_reservation',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
 
 ]];

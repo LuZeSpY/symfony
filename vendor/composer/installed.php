@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '0b54f1a6abdb36ea0c61ae6e5ad7013fe6f950ad',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '0b54f1a6abdb36ea0c61ae6e5ad7013fe6f950ad',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -28,6 +28,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'doctrine/inflector' => array(
+            'pretty_version' => '2.0.5',
+            'version' => '2.0.5.0',
+            'reference' => 'ade2b3bbfb776f27f0558e26eed43b5d9fe1b392',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../doctrine/inflector',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
         'doctrine/lexer' => array(
             'pretty_version' => '1.2.3',
             'version' => '1.2.3.0',
@@ -36,6 +45,15 @@
             'install_path' => __DIR__ . '/../doctrine/lexer',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'nikic/php-parser' => array(
+            'pretty_version' => 'v4.15.1',
+            'version' => '4.15.1.0',
+            'reference' => '0ef6c55a3f47f89d7a374e6f835197a0b5fcf900',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nikic/php-parser',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
         'psr/cache' => array(
             'pretty_version' => '1.0.1',
@@ -276,6 +294,15 @@
             'install_path' => __DIR__ . '/../symfony/http-kernel',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'symfony/maker-bundle' => array(
+            'pretty_version' => 'v1.43.0',
+            'version' => '1.43.0.0',
+            'reference' => 'e3f9a1d9e0f4968f68454403e820dffc7db38a59',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/maker-bundle',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
         'symfony/polyfill-ctype' => array(
             'dev_requirement' => false,
