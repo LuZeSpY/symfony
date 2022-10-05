@@ -2,9 +2,9 @@ accueil:
    path: /
    controller: App\Controller\AccueilController::index
 
-# a-propos:
-#   path: /a-propos
-#   controller: App\Controller\AproposController::index
+# add_product:
+#   path: /add-product
+#   controller: App\Controller\ProductController::addProduct
 
 # blog:
 #    path: /auteur-du-blog
