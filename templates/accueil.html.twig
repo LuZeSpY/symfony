@@ -14,8 +14,14 @@
         <nav class="navbar justify-content-between">
           <span class="navbar-brand mb-0 h1">Crypto Tracker</span>
           <div>
-            <a href="#" class="mx-3 fa-2x"><i class="bi bi-pencil-square"></i></a>
-            <a href="{{ path('add_product') }}"><i class="bi bi-plus-circle"></i></a>
+            {% if app.user %}
+            <a href="#" class="mx-3"><i class="bi bi-pencil-square"></i></a>
+            <a href="{{ path('add_product') }}" class="mx-3"><i class="bi bi-plus-circle"></i></a>
+            <a href="{{ path('app_logout') }}" class="mx-3">Me déconnecter</a>
+            {% else %}
+            <a href="{{ path('app_register') }}" class="mx-3">M'inscrire</a>
+            <a href="{{ path('app_login') }}" class="mx-3">Me connecter</a>
+            {% endif %}
           </div>
         </nav>
       </header>
