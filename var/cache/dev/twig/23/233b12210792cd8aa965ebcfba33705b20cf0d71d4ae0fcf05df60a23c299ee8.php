@@ -25,6 +25,7 @@ class __TwigTemplate_8279609ec1f7351d32a317489b82d2d14975c02672dde6a7c26d3494f04
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
+            'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -49,24 +50,44 @@ class __TwigTemplate_8279609ec1f7351d32a317489b82d2d14975c02672dde6a7c26d3494f04
     }
 
     // line 3
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        echo "Ajout d'une cryptomonnaie";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 5
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 4
-        echo "<p><a href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("products");
-        echo "\">Retour en arrière</a></p>
-<h1>";
-        // line 5
-        echo twig_escape_filter($this->env, (isset($context["form_title"]) || array_key_exists("form_title", $context) ? $context["form_title"] : (function () { throw new RuntimeError('Variable "form_title" does not exist.', 5, $this->source); })()), "html", null, true);
-        echo "</h1>
-";
         // line 6
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form_product"]) || array_key_exists("form_product", $context) ? $context["form_product"] : (function () { throw new RuntimeError('Variable "form_product" does not exist.', 6, $this->source); })()), 'form');
         echo "
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<p><a href=\"";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("products");
+        echo "\" class=\"btn btn-outline-primary m-1\"><i class=\"bi bi-arrow-left-circle\"></i> Retour en arrière</a></p>
+
+<div class=\"example-wrapper\">
+    <h1>Ajouter une cryptomonnaie</h1>
+    ";
+        // line 16
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form_product"]) || array_key_exists("form_product", $context) ? $context["form_product"] : (function () { throw new RuntimeError('Variable "form_product" does not exist.', 16, $this->source); })()), 'form');
+        echo "
+</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -85,17 +106,29 @@ class __TwigTemplate_8279609ec1f7351d32a317489b82d2d14975c02672dde6a7c26d3494f04
 
     public function getDebugInfo()
     {
-        return array (  68 => 6,  64 => 5,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  88 => 16,  81 => 12,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends \"base.html.twig\" %}
 
+{% block title %}Ajout d'une cryptomonnaie{% endblock %}
+
 {% block body %}
-<p><a href=\"{{ path('products') }}\">Retour en arrière</a></p>
-<h1>{{ form_title }}</h1>
-{{ form(form_product) }}
-{% endblock %}", "product/product-form.html.twig", "C:\\xampp\\apps\\symfony\\templates\\product\\product-form.html.twig");
+
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<p><a href=\"{{ path('products') }}\" class=\"btn btn-outline-primary m-1\"><i class=\"bi bi-arrow-left-circle\"></i> Retour en arrière</a></p>
+
+<div class=\"example-wrapper\">
+    <h1>Ajouter une cryptomonnaie</h1>
+    {{ form(form_product) }}
+</div>
+{% endblock %}
+", "product/product-form.html.twig", "C:\\xampp\\apps\\symfony\\templates\\product\\product-form.html.twig");
     }
 }

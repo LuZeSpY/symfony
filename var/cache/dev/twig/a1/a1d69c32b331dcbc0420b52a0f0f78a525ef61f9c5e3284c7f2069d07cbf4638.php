@@ -70,58 +70,70 @@ class __TwigTemplate_a58b2237302a161ca28c0dfbba3979c146d8714da3aead6a1c96f04deb9
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<p><a href=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
-        echo "\">Retour à l'accueil</a></p>
-<h1>Liste des produits</h1>
+        echo "<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
 <p><a href=\"";
-        // line 8
+        // line 11
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
+        echo "\" class=\"btn btn-outline-primary m-1\"><i class=\"bi bi-arrow-left-circle\"></i> Retour à l'accueil</a></p>
+<div class=\"example-wrapper\">
+    <h1>Liste des cryptomonnaies</h1>
+    <p><a href=\"";
+        // line 14
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_product");
-        echo "\">Ajouter un produit</a></p>
-";
-        // line 9
+        echo "\" class=\"btn btn-outline-primary\"><i class=\"bi bi-plus-circle\"></i> Ajouter un produit</a></p>
+    ";
+        // line 15
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 9, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 15, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 10
-            echo "    <table>
-        <thead>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Modifier</th>
-            <th>Supprimer</th>
-        </thead>
-        <tbody>
-            <td>";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 19), "html", null, true);
+            // line 16
+            echo "    <table class=\"table-responsive\">
+        <table class=\"table\">
+            <thead>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prix</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
+            </thead>
+            <tbody>
+                <td>";
+            // line 26
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 26), "html", null, true);
             echo "</td>
-            <td><a href=\"";
-            // line 20
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 20)]), "html", null, true);
+                <td><a href=\"";
+            // line 27
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 27)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 20), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "name", [], "any", false, false, false, 27), "html", null, true);
             echo "</a></td>
-            <td>";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 21), "html", null, true);
+                <td>";
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 28), "html", null, true);
             echo "</td>
-            <td><a href=\"";
-            // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("modify_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 22)]), "html", null, true);
+                <td><a href=\"";
+            // line 29
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("modify_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 29)]), "html", null, true);
             echo "\">Modifier</a></td>
-            <td><a href=\"";
-            // line 23
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 23)]), "html", null, true);
+                <td><a href=\"";
+            // line 30
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 30)]), "html", null, true);
             echo "\">Supprimer</a></td>
-        </tbody>
+            </tbody>
+        </table>
     </table>
-";
+    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 35
+        echo "</div>
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -139,7 +151,7 @@ class __TwigTemplate_a58b2237302a161ca28c0dfbba3979c146d8714da3aead6a1c96f04deb9
 
     public function getDebugInfo()
     {
-        return array (  116 => 23,  112 => 22,  108 => 21,  102 => 20,  98 => 19,  87 => 10,  83 => 9,  79 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  135 => 35,  124 => 30,  120 => 29,  116 => 28,  110 => 27,  106 => 26,  94 => 16,  90 => 15,  86 => 14,  80 => 11,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -149,27 +161,36 @@ class __TwigTemplate_a58b2237302a161ca28c0dfbba3979c146d8714da3aead6a1c96f04deb9
 {% block title %}Hello ProductController!{% endblock %}
 
 {% block body %}
-<p><a href=\"{{ path('accueil') }}\">Retour à l'accueil</a></p>
-<h1>Liste des produits</h1>
-<p><a href=\"{{ path('add_product') }}\">Ajouter un produit</a></p>
-{% for product in products %}
-    <table>
-        <thead>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Modifier</th>
-            <th>Supprimer</th>
-        </thead>
-        <tbody>
-            <td>{{ product.id }}</td>
-            <td><a href=\"{{ path('product', {'id': product.id}) }}\">{{ product.name }}</a></td>
-            <td>{{ product.price }}</td>
-            <td><a href=\"{{ path('modify_product', {'id': product.id}) }}\">Modifier</a></td>
-            <td><a href=\"{{ path('delete_product', {'id': product.id}) }}\">Supprimer</a></td>
-        </tbody>
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<p><a href=\"{{ path('accueil') }}\" class=\"btn btn-outline-primary m-1\"><i class=\"bi bi-arrow-left-circle\"></i> Retour à l'accueil</a></p>
+<div class=\"example-wrapper\">
+    <h1>Liste des cryptomonnaies</h1>
+    <p><a href=\"{{ path('add_product') }}\" class=\"btn btn-outline-primary\"><i class=\"bi bi-plus-circle\"></i> Ajouter un produit</a></p>
+    {% for product in products %}
+    <table class=\"table-responsive\">
+        <table class=\"table\">
+            <thead>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prix</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
+            </thead>
+            <tbody>
+                <td>{{ product.id }}</td>
+                <td><a href=\"{{ path('product', {'id': product.id}) }}\">{{ product.name }}</a></td>
+                <td>{{ product.price }}</td>
+                <td><a href=\"{{ path('modify_product', {'id': product.id}) }}\">Modifier</a></td>
+                <td><a href=\"{{ path('delete_product', {'id': product.id}) }}\">Supprimer</a></td>
+            </tbody>
+        </table>
     </table>
-{% endfor %}
+    {% endfor %}
+</div>
 {% endblock %}", "product/products.html.twig", "C:\\xampp\\apps\\symfony\\templates\\product\\products.html.twig");
     }
 }

@@ -3,25 +3,34 @@
 {% block title %}Hello ProductController!{% endblock %}
 
 {% block body %}
-<p><a href="{{ path('accueil') }}">Retour à l'accueil</a></p>
-<h1>Liste des produits</h1>
-<p><a href="{{ path('add_product') }}">Ajouter un produit</a></p>
-{% for product in products %}
-    <table>
-        <thead>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Modifier</th>
-            <th>Supprimer</th>
-        </thead>
-        <tbody>
-            <td>{{ product.id }}</td>
-            <td><a href="{{ path('product', {'id': product.id}) }}">{{ product.name }}</a></td>
-            <td>{{ product.price }}</td>
-            <td><a href="{{ path('modify_product', {'id': product.id}) }}">Modifier</a></td>
-            <td><a href="{{ path('delete_product', {'id': product.id}) }}">Supprimer</a></td>
-        </tbody>
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<p><a href="{{ path('accueil') }}" class="btn btn-outline-primary m-1"><i class="bi bi-arrow-left-circle"></i> Retour à l'accueil</a></p>
+<div class="example-wrapper">
+    <h1>Liste des cryptomonnaies</h1>
+    <p><a href="{{ path('add_product') }}" class="btn btn-outline-primary"><i class="bi bi-plus-circle"></i> Ajouter un produit</a></p>
+    {% for product in products %}
+    <table class="table-responsive">
+        <table class="table">
+            <thead>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prix</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
+            </thead>
+            <tbody>
+                <td>{{ product.id }}</td>
+                <td><a href="{{ path('product', {'id': product.id}) }}">{{ product.name }}</a></td>
+                <td>{{ product.price }}</td>
+                <td><a href="{{ path('modify_product', {'id': product.id}) }}">Modifier</a></td>
+                <td><a href="{{ path('delete_product', {'id': product.id}) }}">Supprimer</a></td>
+            </tbody>
+        </table>
     </table>
-{% endfor %}
+    {% endfor %}
+</div>
 {% endblock %}

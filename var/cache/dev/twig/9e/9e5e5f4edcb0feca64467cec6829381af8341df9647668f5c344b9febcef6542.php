@@ -52,17 +52,17 @@ class __TwigTemplate_ddb079a25afb59805cc95c45d665da7efbb81af053c34be09161e926488
 \t";
         // line 11
         $this->displayBlock('body', $context, $blocks);
-        // line 38
+        // line 65
         echo "
   <footer class=\"pt-5 my-5 text-muted\">
-    Created by Lucas Didier
+    Created by Me
   </footer>
 </div>
 
 \t\t";
-        // line 44
+        // line 71
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 47
+        // line 74
         echo "\t</body>
 </html>
 ";
@@ -88,38 +88,92 @@ class __TwigTemplate_ddb079a25afb59805cc95c45d665da7efbb81af053c34be09161e926488
         // line 17
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", [], "any", false, false, false, 17)) {
             // line 18
-            echo "            <a href=\"#\" class=\"mx-3\"><i class=\"bi bi-pencil-square\"></i></a>
+            echo "            <a href=\"#\" class=\"btn btn-outline-primary mx-3\"><i class=\"bi bi-pencil-square\"></i></a>
             <a href=\"";
             // line 19
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_product");
-            echo "\" class=\"mx-3\"><i class=\"bi bi-plus-circle\"></i></a>
-            <a href=\"";
+            echo "\" class=\"btn btn-outline-primary mx-3\"><i class=\"bi bi-plus-circle\"></i></a>
+\t\t\t<a href=\"";
             // line 20
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_chart");
+            echo "\" class=\"btn btn-outline-primary mx-3\"><i class=\"bi bi-graph-up\"></i> Vos investissements</a>
+            <a href=\"";
+            // line 21
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\" class=\"mx-3\">Me déconnecter</a>
+            echo "\" class=\"btn btn-outline-primary mx-3\">Me déconnecter</a>
             ";
         } else {
-            // line 22
+            // line 23
             echo "            <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-            echo "\" class=\"mx-3\">M'inscrire</a>
+            echo "\" class=\"btn btn-outline-primary mx-3\">M'inscrire</a>
             <a href=\"";
-            // line 23
+            // line 24
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            echo "\" class=\"mx-3\">Me connecter</a>
+            echo "\" class=\"btn btn-outline-primary mx-3\">Me connecter</a>
             ";
         }
-        // line 25
+        // line 26
         echo "          </div>
         </nav>
       </header>
 
   <main>
-    <div class=\"row g-5\">
-      <div class=\"col-md-6\">
-        <h2>Solde :</h2>
-      </div>
-    </div>
+    <div class=\"album py-5\" id=\"france\">
+\t\t<div class=\"container\">
+            <h1 class=\"mb-5\">Cours des cryptomonnaies</h1>
+\t\t\t<div class=\"row g-3\">
+\t\t\t\t<div class=\"row my-3\">
+\t\t\t\t\t<div class=\"card\">
+\t\t\t\t\t\t<div class=\"card-body\">
+              <span>Mis à jour le ";
+        // line 38
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["response"]) || array_key_exists("response", $context) ? $context["response"] : (function () { throw new RuntimeError('Variable "response" does not exist.', 38, $this->source); })()), "status", [], "any", false, false, false, 38), "timestamp", [], "any", false, false, false, 38), "d/m/Y", "Europe/Paris"), "html", null, true);
+        echo " à ";
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["response"]) || array_key_exists("response", $context) ? $context["response"] : (function () { throw new RuntimeError('Variable "response" does not exist.', 38, $this->source); })()), "status", [], "any", false, false, false, 38), "timestamp", [], "any", false, false, false, 38), "H:i:s", "Europe/Paris"), "html", null, true);
+        echo "</span>
+\t\t\t\t\t\t\t<h5 class=\"card-title\">Prix du BTC : ";
+        // line 39
+        echo twig_escape_filter($this->env, twig_join_filter(twig_array_map($this->env, twig_array_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["response"]) || array_key_exists("response", $context) ? $context["response"] : (function () { throw new RuntimeError('Variable "response" does not exist.', 39, $this->source); })()), "data", [], "any", false, false, false, 39), function ($_____) use ($context, $macros) { $context["_"] = $_____; return (0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["_"]) || array_key_exists("_", $context) ? $context["_"] : (function () { throw new RuntimeError('Variable "_" does not exist.', 39, $this->source); })()), "symbol", [], "any", false, false, false, 39), "BTC")); }), function ($_____) use ($context, $macros) { $context["_"] = $_____; return $this->extensions['Twig\Extra\Intl\IntlExtension']->formatCurrency(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["_"]) || array_key_exists("_", $context) ? $context["_"] : (function () { throw new RuntimeError('Variable "_" does not exist.', 39, $this->source); })()), "quote", [], "any", false, false, false, 39), "EUR", [], "any", false, false, false, 39), "price", [], "any", false, false, false, 39), "EUR", ["rounding_mode" => "floor"], "fr"); })), "html", null, true);
+        echo "</h5>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+                <div class=\"row my-3\">
+\t\t\t\t\t<div class=\"card\">
+\t\t\t\t\t\t<div class=\"card-body\">
+              <span>Mis à jour le ";
+        // line 46
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["response"]) || array_key_exists("response", $context) ? $context["response"] : (function () { throw new RuntimeError('Variable "response" does not exist.', 46, $this->source); })()), "status", [], "any", false, false, false, 46), "timestamp", [], "any", false, false, false, 46), "d/m/Y", "Europe/Paris"), "html", null, true);
+        echo " à ";
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["response"]) || array_key_exists("response", $context) ? $context["response"] : (function () { throw new RuntimeError('Variable "response" does not exist.', 46, $this->source); })()), "status", [], "any", false, false, false, 46), "timestamp", [], "any", false, false, false, 46), "H:i:s", "Europe/Paris"), "html", null, true);
+        echo "</span>
+\t\t\t\t\t\t\t<h5 class=\"card-title\">Prix du ETH : ";
+        // line 47
+        echo twig_escape_filter($this->env, twig_join_filter(twig_array_map($this->env, twig_array_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["response"]) || array_key_exists("response", $context) ? $context["response"] : (function () { throw new RuntimeError('Variable "response" does not exist.', 47, $this->source); })()), "data", [], "any", false, false, false, 47), function ($_____) use ($context, $macros) { $context["_"] = $_____; return (0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["_"]) || array_key_exists("_", $context) ? $context["_"] : (function () { throw new RuntimeError('Variable "_" does not exist.', 47, $this->source); })()), "symbol", [], "any", false, false, false, 47), "ETH")); }), function ($_____) use ($context, $macros) { $context["_"] = $_____; return $this->extensions['Twig\Extra\Intl\IntlExtension']->formatCurrency(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["_"]) || array_key_exists("_", $context) ? $context["_"] : (function () { throw new RuntimeError('Variable "_" does not exist.', 47, $this->source); })()), "quote", [], "any", false, false, false, 47), "EUR", [], "any", false, false, false, 47), "price", [], "any", false, false, false, 47), "EUR", ["rounding_mode" => "floor"], "fr"); })), "html", null, true);
+        echo "</h5>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+                <div class=\"row my-3\">
+\t\t\t\t\t<div class=\"card\">
+\t\t\t\t\t\t<div class=\"card-body\">
+              <span>Mis à jour le ";
+        // line 54
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["response"]) || array_key_exists("response", $context) ? $context["response"] : (function () { throw new RuntimeError('Variable "response" does not exist.', 54, $this->source); })()), "status", [], "any", false, false, false, 54), "timestamp", [], "any", false, false, false, 54), "d/m/Y", "Europe/Paris"), "html", null, true);
+        echo " à ";
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["response"]) || array_key_exists("response", $context) ? $context["response"] : (function () { throw new RuntimeError('Variable "response" does not exist.', 54, $this->source); })()), "status", [], "any", false, false, false, 54), "timestamp", [], "any", false, false, false, 54), "H:i:s", "Europe/Paris"), "html", null, true);
+        echo "</span>
+\t\t\t\t\t\t\t<h5 class=\"card-title\">Prix du XRP : ";
+        // line 55
+        echo twig_escape_filter($this->env, twig_join_filter(twig_array_map($this->env, twig_array_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["response"]) || array_key_exists("response", $context) ? $context["response"] : (function () { throw new RuntimeError('Variable "response" does not exist.', 55, $this->source); })()), "data", [], "any", false, false, false, 55), function ($_____) use ($context, $macros) { $context["_"] = $_____; return (0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["_"]) || array_key_exists("_", $context) ? $context["_"] : (function () { throw new RuntimeError('Variable "_" does not exist.', 55, $this->source); })()), "symbol", [], "any", false, false, false, 55), "XRP")); }), function ($_____) use ($context, $macros) { $context["_"] = $_____; return $this->extensions['Twig\Extra\Intl\IntlExtension']->formatCurrency(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["_"]) || array_key_exists("_", $context) ? $context["_"] : (function () { throw new RuntimeError('Variable "_" does not exist.', 55, $this->source); })()), "quote", [], "any", false, false, false, 55), "EUR", [], "any", false, false, false, 55), "price", [], "any", false, false, false, 55), "EUR", ["rounding_mode" => "floor"], "fr"); })), "html", null, true);
+        echo "</h5>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
   </main>
 
   ";
@@ -128,14 +182,14 @@ class __TwigTemplate_ddb079a25afb59805cc95c45d665da7efbb81af053c34be09161e926488
 
     }
 
-    // line 44
+    // line 71
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 45
+        // line 72
         echo "\t\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW\" crossorigin=\"anonymous\"></script>
 \t\t";
         
@@ -150,7 +204,7 @@ class __TwigTemplate_ddb079a25afb59805cc95c45d665da7efbb81af053c34be09161e926488
 
     public function getDebugInfo()
     {
-        return array (  139 => 45,  132 => 44,  113 => 25,  108 => 23,  103 => 22,  98 => 20,  94 => 19,  91 => 18,  89 => 17,  82 => 12,  75 => 11,  66 => 47,  64 => 44,  56 => 38,  54 => 11,  42 => 1,);
+        return array (  193 => 72,  186 => 71,  169 => 55,  163 => 54,  153 => 47,  147 => 46,  137 => 39,  131 => 38,  117 => 26,  112 => 24,  107 => 23,  102 => 21,  98 => 20,  94 => 19,  91 => 18,  89 => 17,  82 => 12,  75 => 11,  66 => 74,  64 => 71,  56 => 65,  54 => 11,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -172,29 +226,56 @@ class __TwigTemplate_ddb079a25afb59805cc95c45d665da7efbb81af053c34be09161e926488
           <span class=\"navbar-brand mb-0 h1\">Crypto Tracker</span>
           <div>
             {% if app.user %}
-            <a href=\"#\" class=\"mx-3\"><i class=\"bi bi-pencil-square\"></i></a>
-            <a href=\"{{ path('add_product') }}\" class=\"mx-3\"><i class=\"bi bi-plus-circle\"></i></a>
-            <a href=\"{{ path('app_logout') }}\" class=\"mx-3\">Me déconnecter</a>
+            <a href=\"#\" class=\"btn btn-outline-primary mx-3\"><i class=\"bi bi-pencil-square\"></i></a>
+            <a href=\"{{ path('add_product') }}\" class=\"btn btn-outline-primary mx-3\"><i class=\"bi bi-plus-circle\"></i></a>
+\t\t\t<a href=\"{{ path('app_chart') }}\" class=\"btn btn-outline-primary mx-3\"><i class=\"bi bi-graph-up\"></i> Vos investissements</a>
+            <a href=\"{{ path('app_logout') }}\" class=\"btn btn-outline-primary mx-3\">Me déconnecter</a>
             {% else %}
-            <a href=\"{{ path('app_register') }}\" class=\"mx-3\">M'inscrire</a>
-            <a href=\"{{ path('app_login') }}\" class=\"mx-3\">Me connecter</a>
+            <a href=\"{{ path('app_register') }}\" class=\"btn btn-outline-primary mx-3\">M'inscrire</a>
+            <a href=\"{{ path('app_login') }}\" class=\"btn btn-outline-primary mx-3\">Me connecter</a>
             {% endif %}
           </div>
         </nav>
       </header>
 
   <main>
-    <div class=\"row g-5\">
-      <div class=\"col-md-6\">
-        <h2>Solde :</h2>
-      </div>
-    </div>
+    <div class=\"album py-5\" id=\"france\">
+\t\t<div class=\"container\">
+            <h1 class=\"mb-5\">Cours des cryptomonnaies</h1>
+\t\t\t<div class=\"row g-3\">
+\t\t\t\t<div class=\"row my-3\">
+\t\t\t\t\t<div class=\"card\">
+\t\t\t\t\t\t<div class=\"card-body\">
+              <span>Mis à jour le {{ response.status.timestamp|date(\"d/m/Y\", \"Europe/Paris\") }} à {{ response.status.timestamp|date(\"H:i:s\", \"Europe/Paris\") }}</span>
+\t\t\t\t\t\t\t<h5 class=\"card-title\">Prix du BTC : {{ response.data|filter(_ => _.symbol == 'BTC')|map(_ => _.quote.EUR.price|format_currency('EUR', {rounding_mode: 'floor'}, locale='fr'))|join() }}</h5>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+                <div class=\"row my-3\">
+\t\t\t\t\t<div class=\"card\">
+\t\t\t\t\t\t<div class=\"card-body\">
+              <span>Mis à jour le {{ response.status.timestamp|date(\"d/m/Y\", \"Europe/Paris\") }} à {{ response.status.timestamp|date(\"H:i:s\", \"Europe/Paris\") }}</span>
+\t\t\t\t\t\t\t<h5 class=\"card-title\">Prix du ETH : {{ response.data|filter(_ => _.symbol == 'ETH')|map(_ => _.quote.EUR.price|format_currency('EUR', {rounding_mode: 'floor'}, locale='fr'))|join() }}</h5>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+                <div class=\"row my-3\">
+\t\t\t\t\t<div class=\"card\">
+\t\t\t\t\t\t<div class=\"card-body\">
+              <span>Mis à jour le {{ response.status.timestamp|date(\"d/m/Y\", \"Europe/Paris\") }} à {{ response.status.timestamp|date(\"H:i:s\", \"Europe/Paris\") }}</span>
+\t\t\t\t\t\t\t<h5 class=\"card-title\">Prix du XRP : {{ response.data|filter(_ => _.symbol == 'XRP')|map(_ => _.quote.EUR.price|format_currency('EUR', {rounding_mode: 'floor'}, locale='fr'))|join() }}</h5>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
   </main>
 
   {% endblock %}
 
   <footer class=\"pt-5 my-5 text-muted\">
-    Created by Lucas Didier
+    Created by Me
   </footer>
 </div>
 

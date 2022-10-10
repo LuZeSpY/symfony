@@ -8,7 +8,7 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
-        '/api' => [[['_route' => 'app_api', '_controller' => 'App\\Controller\\ApiController::index'], null, null, null, false, false, null]],
+        '/chart' => [[['_route' => 'app_chart', '_controller' => 'App\\Controller\\ChartController::index'], null, null, null, false, false, null]],
         '/add-product' => [[['_route' => 'add_product', '_controller' => 'App\\Controller\\ProductController::addProduct'], null, null, null, false, false, null]],
         '/products' => [[['_route' => 'products', '_controller' => 'App\\Controller\\ProductController::products'], null, null, null, false, false, null]],
         '/inscription' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
