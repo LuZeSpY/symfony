@@ -2,7 +2,7 @@
 // echo phpinfo();
 
 use App\Kernel;
-use Symfony\Bundle\MakerBundle;
+use Symfony\Bundle\MakerBundle\MakerBundle;
 
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
